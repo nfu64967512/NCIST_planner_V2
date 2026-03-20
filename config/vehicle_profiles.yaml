@@ -1,0 +1,332 @@
+# 飛行器參數配置文件
+# 支援多種無人機型號的參數設定
+
+# ==========================================
+# 多旋翼無人機配置
+# ==========================================
+multirotor:
+  # DJI Mavic 3
+  dji_mavic_3:
+    name: "DJI Mavic 3"
+    type: "multirotor"
+    manufacturer: "DJI"
+    
+    # 物理參數
+    mass_kg: 0.895
+    max_payload_kg: 0.2
+    rotor_count: 4
+    
+    # 飛行性能
+    max_speed_mps: 19.0
+    cruise_speed_mps: 15.0
+    max_ascent_speed_mps: 6.0
+    max_descent_speed_mps: 6.0
+    
+    # 續航力
+    max_flight_time_min: 46
+    battery_capacity_mah: 5000
+    hover_time_min: 40
+    
+    # 飛行限制
+    max_altitude_m: 6000
+    service_ceiling_m: 6000
+    max_wind_speed_mps: 12.0
+    operating_temp_min_c: -10
+    operating_temp_max_c: 40
+    
+    # 動力學參數
+    max_acceleration_mps2: 4.0
+    max_deceleration_mps2: 5.0
+    max_yaw_rate_dps: 120.0
+    max_pitch_deg: 35
+    max_roll_deg: 35
+    
+    # 相機配置
+    camera:
+      sensor_width_mm: 17.3
+      sensor_height_mm: 13.0
+      image_width_px: 5280
+      image_height_px: 3956
+      focal_length_mm: 24.0
+      gimbal_pitch_min_deg: -90
+      gimbal_pitch_max_deg: 30
+    
+    # 任務參數
+    waypoint_radius_m: 1.5
+    loiter_radius_m: 5.0
+    rtl_altitude_m: 50.0
+    
+  # DJI Phantom 4 Pro
+  dji_phantom_4_pro:
+    name: "DJI Phantom 4 Pro"
+    type: "multirotor"
+    manufacturer: "DJI"
+    
+    mass_kg: 1.375
+    max_payload_kg: 0.3
+    rotor_count: 4
+    
+    max_speed_mps: 20.0
+    cruise_speed_mps: 12.0
+    max_ascent_speed_mps: 6.0
+    max_descent_speed_mps: 4.0
+    
+    max_flight_time_min: 30
+    battery_capacity_mah: 5870
+    hover_time_min: 28
+    
+    max_altitude_m: 6000
+    service_ceiling_m: 6000
+    max_wind_speed_mps: 10.0
+    
+    max_acceleration_mps2: 3.5
+    max_deceleration_mps2: 4.5
+    max_yaw_rate_dps: 150.0
+    
+    camera:
+      sensor_width_mm: 13.2
+      sensor_height_mm: 8.8
+      image_width_px: 5472
+      image_height_px: 3648
+      focal_length_mm: 8.8
+      gimbal_pitch_min_deg: -90
+      gimbal_pitch_max_deg: 30
+    
+    waypoint_radius_m: 1.0
+    loiter_radius_m: 3.0
+    rtl_altitude_m: 30.0
+  
+  # DJI Mini 3 Pro
+  dji_mini_3_pro:
+    name: "DJI Mini 3 Pro"
+    type: "multirotor"
+    manufacturer: "DJI"
+    
+    mass_kg: 0.249
+    max_payload_kg: 0.05
+    rotor_count: 4
+    
+    max_speed_mps: 16.0
+    cruise_speed_mps: 10.0
+    max_ascent_speed_mps: 5.0
+    max_descent_speed_mps: 5.0
+    
+    max_flight_time_min: 34
+    battery_capacity_mah: 2453
+    hover_time_min: 30
+    
+    max_altitude_m: 4000
+    service_ceiling_m: 4000
+    max_wind_speed_mps: 10.7
+    
+    max_acceleration_mps2: 3.0
+    max_deceleration_mps2: 4.0
+    max_yaw_rate_dps: 130.0
+    
+    camera:
+      sensor_width_mm: 9.7
+      sensor_height_mm: 7.3
+      image_width_px: 4000
+      image_height_px: 3000
+      focal_length_mm: 6.72
+      gimbal_pitch_min_deg: -90
+      gimbal_pitch_max_deg: 60
+    
+    waypoint_radius_m: 1.0
+    loiter_radius_m: 2.0
+    rtl_altitude_m: 30.0
+
+  # 通用四軸飛行器（可自訂）
+  generic_quadcopter:
+    name: "Generic Quadcopter"
+    type: "multirotor"
+    manufacturer: "Generic"
+    
+    mass_kg: 1.5
+    max_payload_kg: 0.5
+    rotor_count: 4
+    
+    max_speed_mps: 15.0
+    cruise_speed_mps: 8.0
+    max_ascent_speed_mps: 5.0
+    max_descent_speed_mps: 3.0
+    
+    max_flight_time_min: 25
+    battery_capacity_mah: 5000
+    hover_time_min: 20
+    
+    max_altitude_m: 500
+    service_ceiling_m: 1000
+    max_wind_speed_mps: 10.0
+    
+    max_acceleration_mps2: 3.0
+    max_deceleration_mps2: 4.0
+    max_yaw_rate_dps: 120.0
+    
+    camera:
+      sensor_width_mm: 13.2
+      sensor_height_mm: 8.8
+      image_width_px: 4000
+      image_height_px: 3000
+      focal_length_mm: 8.0
+      gimbal_pitch_min_deg: -90
+      gimbal_pitch_max_deg: 30
+    
+    waypoint_radius_m: 2.0
+    loiter_radius_m: 5.0
+    rtl_altitude_m: 50.0
+
+# ==========================================
+# 固定翼無人機配置（預留）
+# ==========================================
+fixed_wing:
+  # 衝浪者固定翼無人機（Surfer FW UAV）
+  surfer:
+    name: "衝浪者 (Surfer)"
+    type: "fixed_wing"
+    manufacturer: "Custom"
+
+    mass_kg: 3.2
+    max_payload_kg: 1.0
+    wingspan_m: 1.8
+
+    # 速度範圍
+    stall_speed_mps: 11.0          # 失速速度（最低飛行速度）
+    cruise_speed_mps: 18.0         # 巡航速度
+    max_speed_mps: 28.0            # 最大速度
+
+    # 續航力
+    max_flight_time_min: 90
+    max_range_km: 40
+
+    # 飛行限制
+    max_altitude_m: 2000
+    service_ceiling_m: 3000
+    max_wind_speed_mps: 12.0
+
+    # 轉彎性能（關鍵參數）
+    min_turn_radius_m: 30.0        # 最小轉彎半徑（@cruise speed, max bank）
+    max_bank_angle_deg: 45.0       # 最大傾斜角（機體結構限制）
+    recommended_turn_radius_m: 50.0  # 建議轉彎半徑（留餘量）
+
+    # 起飛性能
+    takeoff_distance_m: 50         # 起飛跑道距離（公尺）
+    takeoff_climb_angle_deg: 15.0  # 起飛爬升角度（度）
+    min_takeoff_speed_mps: 13.0    # 最小起飛速度
+
+    # 降落性能
+    landing_distance_m: 60         # 降落滑跑距離（公尺）
+    approach_speed_mps: 14.0       # 進場速度
+    glide_slope_deg: 5.0           # 下滑坡度（度）
+
+    # 相機配置
+    camera:
+      sensor_width_mm: 13.2
+      sensor_height_mm: 8.8
+      image_width_px: 4000
+      image_height_px: 3000
+      focal_length_mm: 8.0
+      gimbal_pitch_min_deg: -90
+      gimbal_pitch_max_deg: 0
+
+    # 任務參數
+    waypoint_radius_m: 30.0        # 到達半徑（固定翼需較大）
+    loiter_radius_m: 80.0          # 盤旋半徑
+    rtl_altitude_m: 120.0          # 返航高度
+
+    # 五邊進場飛行模式預設值
+    pattern_altitude_m: 80.0       # 五邊飛行高度（AGL）
+    downwind_offset_m: 200.0       # 下風邊側偏距離（公尺）
+    pattern_leg_length_m: 300.0    # 標準腿長（公尺）
+    final_approach_dist_m: 400.0   # 最終進場起始距離（公尺）
+
+  generic_fixed_wing:
+    name: "Generic Fixed Wing"
+    type: "fixed_wing"
+    manufacturer: "Generic"
+
+    mass_kg: 2.5
+    max_payload_kg: 1.0
+    wingspan_m: 2.0
+
+    # 速度範圍
+    stall_speed_mps: 12.0
+    cruise_speed_mps: 18.0
+    max_speed_mps: 25.0
+
+    # 續航力
+    max_flight_time_min: 120
+    max_range_km: 50
+
+    # 飛行限制
+    max_altitude_m: 3000
+    service_ceiling_m: 4000
+    max_wind_speed_mps: 15.0
+
+    # 轉彎性能
+    min_turn_radius_m: 50.0
+    max_bank_angle_deg: 45
+    recommended_turn_radius_m: 80.0
+
+    # 起降
+    takeoff_distance_m: 30
+    landing_distance_m: 40
+
+    waypoint_radius_m: 20.0
+    loiter_radius_m: 100.0
+    rtl_altitude_m: 100.0
+
+# ==========================================
+# 垂直起降固定翼（VTOL）配置（預留）
+# ==========================================
+vtol:
+  generic_vtol:
+    name: "Generic VTOL"
+    type: "vtol"
+    manufacturer: "Generic"
+    
+    mass_kg: 3.0
+    max_payload_kg: 1.5
+    
+    # 多旋翼模式
+    multirotor_mode:
+      max_speed_mps: 10.0
+      cruise_speed_mps: 5.0
+      max_flight_time_min: 30
+    
+    # 固定翼模式
+    fixed_wing_mode:
+      cruise_speed_mps: 20.0
+      max_speed_mps: 30.0
+      max_flight_time_min: 90
+    
+    # 轉換時間
+    transition_time_s: 5.0
+    
+    max_altitude_m: 3000
+    service_ceiling_m: 4000
+    
+    waypoint_radius_m: 10.0
+    loiter_radius_m: 50.0
+    rtl_altitude_m: 80.0
+
+# ==========================================
+# 預設配置
+# ==========================================
+default:
+  vehicle_type: "multirotor"
+  vehicle_profile: "generic_quadcopter"
+  
+  # 預設飛行參數
+  default_altitude_m: 10.0
+  default_speed_mps: 3.0
+  default_spacing_m: 20.0
+  
+  # 安全參數
+  safety_margin_m: 5.0
+  emergency_descent_rate_mps: 2.0
+  low_battery_threshold_percent: 25
+  
+  # 群飛參數
+  swarm_separation_m: 10.0
+  swarm_altitude_increment_m: 3.0
